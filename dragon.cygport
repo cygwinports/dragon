@@ -1,0 +1,10 @@
+inherit kde4
+
+NAME="dragon"
+VERSION=4.10.5
+RELEASE=1
+CATEGORY="Audio Video"
+SUMMARY="KDE Phonon-based media player"
+DESCRIPTION="Part of the KDE multimedia suite"
+OBSOLETES="dragonplayer"
+REQUIRES="phonon-backend-gstreamer"
