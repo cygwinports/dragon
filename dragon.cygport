@@ -1,7 +1,7 @@
 inherit kde4
 
 NAME="dragon"
-VERSION=4.14.3
+VERSION=14.12.3
 RELEASE=1
 CATEGORY="Audio Video"
 SUMMARY="KDE Phonon-based media player"
