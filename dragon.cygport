@@ -1,10 +1,11 @@
-inherit kde4
+inherit kf5
 
 NAME="dragon"
-VERSION=15.04.3
+VERSION=16.08.3
 RELEASE=1
 CATEGORY="Audio Video"
 SUMMARY="KDE Phonon-based media player"
 DESCRIPTION="Part of the KDE multimedia suite"
 OBSOLETES="dragonplayer"
-REQUIRES="kde-runtime phonon-backend-gstreamer"
+
+REQUIRES="phonon4qt5-backend-gstreamer"
