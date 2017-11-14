@@ -1,11 +1,34 @@
 inherit kf5
 
 NAME="dragon"
-VERSION=17.04.3
+VERSION=17.08.3
 RELEASE=1
 CATEGORY="Audio Video"
 SUMMARY="KDE Phonon-based media player"
 DESCRIPTION="Part of the KDE multimedia suite"
-OBSOLETES="dragonplayer"
 
-REQUIRES="phonon4qt5-backend-gstreamer"
+PKG_NAMES="${NAME} ${NAME}5-part"
+dragon_OBSOLETES="dragonplayer"
+dragon_REQUIRES="${NAME}5-part"
+dragon_CONTENTS="
+	etc/postinstall/dragon.sh
+	etc/xdg/dragonplayerrc
+	usr/bin/dragon.exe
+	usr/share/applications/org.kde.dragonplayer.desktop
+	usr/share/doc/HTML/*/dragonplayer/
+	usr/share/doc/dragon/
+	usr/share/icons/hicolor/*/apps/dragonplayer.*
+	usr/share/icons/oxygen/*/actions/player-volume-muted.*
+	usr/share/kservices5/ServiceMenus/dragonplayer_play_dvd.desktop
+	usr/share/kxmlgui5/dragonplayer/
+	usr/share/locale/*/LC_MESSAGES/dragonplayer.mo
+	usr/share/man/man1/dragon.1*
+	usr/share/man/*/man1/dragon.1*
+	usr/share/metainfo/org.kde.dragonplayer.appdata.xml
+	usr/share/solid/actions/dragonplayer-*.desktop
+"
+dragon5_part_REQUIRES="phonon4qt5-backend-gstreamer"
+dragon5_part_CONTENTS="
+	usr/lib/qt5/plugins/dragonpart.dll
+	usr/share/kservices5/dragonplayer_part.desktop
+"
